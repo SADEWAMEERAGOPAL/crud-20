@@ -1,10 +1,9 @@
 <mat-sidenav-container fullscreen>
   <mat-sidenav #sidenav>
     <mat-list (click)="sidenav.close()">
-
-      <mat-list-item role="button">Posts</mat-list-item>
-      <mat-list-item role="button">Add Post</mat-list-item>
-      <mat-list-item role="button">Log Out</mat-list-item>
+      <mat-list-item role="button" routerLink="posts/posts">Posts</mat-list-item>
+      <mat-list-item role="button" routerLink="posts/addpost">Add Post</mat-list-item>
+      <mat-list-item role="button" >Log Out</mat-list-item>
 
     </mat-list>
   </mat-sidenav>

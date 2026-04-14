@@ -14,7 +14,8 @@ export class Post {
 
   private _http=inject(HttpClient);
   postsignala=signal<Ipost[]>([]);
-  
+
+ 
 
   getposts():Observable<Ipost[]>{
     return this._http.get<Ipost[]>(this.Blogs_Url).pipe(
@@ -33,4 +34,7 @@ export class Post {
     
     
   }
+
+  
+ 
 }

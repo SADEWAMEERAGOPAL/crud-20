@@ -1,6 +1,7 @@
-import { Component, signal } from '@angular/core';
+import { Component, inject, signal } from '@angular/core';
 import { RouterLinkWithHref, RouterModule, RouterOutlet } from '@angular/router';
 import { MATERIAL_MODULE } from './const/material';
+import { Post } from './services/post';
 
 @Component({
   selector: 'app-root',
@@ -10,4 +11,9 @@ import { MATERIAL_MODULE } from './const/material';
 })
 export class App {
   protected readonly title = signal('crud-20');
+  
+  _postservice=inject(Post);
+
+
+
 }

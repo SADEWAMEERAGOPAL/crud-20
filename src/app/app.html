@@ -1,7 +1,8 @@
+
 <mat-sidenav-container fullscreen>
   <mat-sidenav #sidenav>
     <mat-list (click)="sidenav.close()">
-      <mat-list-item role="button" routerLink="posts/posts">Posts</mat-list-item>
+      <mat-list-item role="button" routerLink="posts">Posts</mat-list-item>
       <mat-list-item role="button" routerLink="posts/addpost">Add Post</mat-list-item>
       <mat-list-item role="button" >Log Out</mat-list-item>
 
@@ -24,3 +25,8 @@
 </mat-sidenav-container>
 
 
+@if ( _postservice.Spinner()) {
+  <div class="spinner">
+    <mat-spinner></mat-spinner>
+  </div>
+}
